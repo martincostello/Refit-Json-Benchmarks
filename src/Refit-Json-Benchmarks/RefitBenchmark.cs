@@ -3,7 +3,6 @@
 
 using System;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -20,9 +19,6 @@ namespace RefitJsonBenchmarks
             {
                 BaseAddress = new Uri("https://api.github.com")
             };
-
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
-            client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("Refit-Json-Benchmarks", "1.0.0"));
 
             var settings = new RefitSettings()
             {

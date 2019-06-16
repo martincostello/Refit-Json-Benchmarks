@@ -7,6 +7,7 @@ using Refit;
 
 namespace RefitJsonBenchmarks.GitHub
 {
+    [Headers("Accept: application/vnd.github.v3+json", "User-Agent: Refit-Json-Benchmarks/1.0.0")]
     public interface IGitHub
     {
         [Get("/repos/{owner}/{repo}/issues")]
